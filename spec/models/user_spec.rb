@@ -52,11 +52,11 @@ RSpec.describe User, :type => :model do
 
   context '.reading_isbn?' do
     it 'returns true if the person has a book with a given ISBN' do
-      expect(user.reading_isbn?(book.isbn)).to be_true
+      expect(user.reading_isbn?(book.isbn)).to eql(true)
     end
 
     it 'returns false if the person does not have a book with a given ISBN' do
-      expect(user.reading_isbn?("9782222222222")).to be_false
+      expect(user.reading_isbn?("9782222222222")).to eql(false)
     end
   end
 end
