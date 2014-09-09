@@ -11,7 +11,7 @@ RSpec.describe Book, :type => :model do
     it 'cannot be nil' do
       book.title = nil
       book.save
-      expect(book.reload).to_not be_valid
+      expect(book).to_not be_valid
     end
   end
 
@@ -19,7 +19,7 @@ RSpec.describe Book, :type => :model do
     it 'cannot be nil' do
       book.subtitle = nil
       book.save
-      expect(book.reload).to_not be_valid
+      expect(book).to_not be_valid
     end
 
   end

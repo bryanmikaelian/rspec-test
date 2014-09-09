@@ -16,7 +16,7 @@ RSpec.describe User, :type => :model do
     it 'cannot be nil' do
       user.first_name = nil
       user.save
-      expect(user.reload).to_not be_valid
+      expect(user).to_not be_valid
     end
   end
 
@@ -24,7 +24,7 @@ RSpec.describe User, :type => :model do
     it 'cannot be nil' do
       user.last_name = nil
       user.save
-      expect(user.reload).to_not be_valid
+      expect(user).to_not be_valid
     end
   end
 
@@ -32,7 +32,7 @@ RSpec.describe User, :type => :model do
     it 'cannot be nil' do
       user.email = nil
       user.save
-      expect(user.reload).to_not be_valid
+      expect(user).to_not be_valid
     end
   end
 
@@ -40,7 +40,7 @@ RSpec.describe User, :type => :model do
     it 'cannot be nil' do
       user.bio = nil
       user.save
-      expect(user.reload).to_not be_valid
+      expect(user).to_not be_valid
     end
   end
 
